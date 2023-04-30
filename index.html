@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+    </style>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script src="script.js" defer></script>
+    <title>F4LIFE | Encontre sua rep!</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+</head>
+
+<body>
+    <div class="page">
+        <header>
+            <img class="logo" src="images/logo-header.png" alt="logo" height="100px">
+            <nav>
+                <a href="#aboutUs" rel="section1"> Quem somos? </a>
+                <a href="#services" rel="section2"> Serviços </a>
+                <a href="#formId" rel="section3"> Fale conosco </a>
+            </nav>
+        </header>
+
+        <main>
+            <section class="sections-body" id="aboutUs">
+                <div class="about-us">
+                    <div class="top-paragraphs">
+                        <div class="paragraphs" id="paragraph-1">
+                            <h3>Bem-vindo ao nosso site!</h3>
+                            <br>
+                            <p>
+                                Somos uma imobiliária especializada em moradias universitárias! Aqui, você encontrará
+                                todas
+                                as
+                                ferramentas necessárias para ajudá-lo a encontrar ou criar uma república confortável e
+                                divertida,
+                                colegas de quarto confiáveis para dividir uma casa ou apartamento e se deseja mais
+                                privacidade,
+                                temos kitnets também.
+                            </p>
+                        </div>
+                        <div class="paragraphs" id="paragraph-1">
+                            <h3>O que podemos oferecer?</h2>
+                                <br>
+                                <p>
+                                    Em nosso site, você pode criar um perfil e compartilhar suas informações de contato,
+                                    interesses
+                                    e o que está buscando. Você também pode pesquisar por outros alunos universitários
+                                    que
+                                    estejam
+                                    procurando um lugar para morar e comparar seus perfis para encontrar alguém que seja
+                                    compatível
+                                    com seus objetivos e estilo de vida.
+                                </p>
+                        </div>
+                    </div>
+                    <div class="paragraphs">
+                        <br>
+                        <p class="last-paragraph">
+                            Agora ficou fácil, prático e seguro organizar e encontrar um lugar para chamar de lar
+                            durante
+                            seus
+                            anos universitários!
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="sections-body" id="services">
+
+                <div class="parte-1">
+                    <h3 class="title-1">Escolha entre:</h3> <br>
+                    <ul>
+                        <li>Encontrar um lugar já pronto para morar;</li>
+                        <br>
+                        <li>Encontrar pessoas que também desejam criar uma república nova ou uma moradia compartilhada*;
+                        </li>
+                        <br>
+                        <li> Compartilhar vagas da sua república ou moradia compartilhada.</li>
+                        <br>
+                    </ul>
+                    <br>
+                    <p id="observation"> *Moradia compartilhada são casas ou apartamentos para até 3 pessoas.</p>
+                </div>
+
+                <div class="parte-2" id="form-find">
+                    <div class="form">
+                        <h3 class="title" id="title-2"> <strong>Comece a procurar!</strong></h3>
+                        <form class="finder" action="#">
+
+                            <label for="city">Escolha uma cidade:</label>
+                            <select for="city">
+                                <option value="escolha">Cidades disponíveis:</option>
+                                <option value="sao-paulo">São Paulo</option>
+                                <option value="rio-de-janeiro">Rio de Janeiro</option>
+                                <option value="belo-horizonte">Belo Horizonte</option>
+                                <option value="curitiba">Curitiba</option>
+                                <option value="fortaleza">Fortaleza</option>
+                            </select>
+
+                            <p>Procura lugar ou uma pessoa?
+                            <p>
+                                <label for="place" id="radioLabel">Lugar</label>
+                                <input class="radio" type=radio id="place" name="option" value="place">
+                                <label for="person" id="radioLabel">Pessoa</label>
+                                <input class="radio" type="radio" id="person" name="option">
+                                <br>
+
+                                <label for="moradia">Escolha um tipo de moradia:</label>
+                                <select for="city">
+                                    <option value="escolha">Moradias disponíveis:</option>
+                                    <option value="republica"> República </option>
+                                    <option value="moradia-comparilhada">Moradia Compartilhada</option>
+                                    <option value="kitnet">Kitnet</option>
+                                    <option value="pensao">Pensao</option>
+                                </select>
+                                <br>
+
+                                <label for="price">Determine um valor máximo:</label><br>
+                                <input type="range" id="price" name="price" min="200" max="3000" step="50">
+                            <p>Valor: <output id="value"></output></p>
+
+                            <button class= "" onclick="loader(event)" type="button">Comece a buscar!</button>
+
+                        </form>
+
+                    </div>
+                </div>
+            </section>
+
+            <section class="sections-body" id="formId">
+
+                <form class="contact-form" action="#">
+                    <h3 class="title" id="title-3"> Deixe seu nome e email que em breve entraremos em contato!</h3><br>
+                    <label for="formName" required> Insira seu nome: </label>
+                    <input name="formName" id="formName" type="text" size="40"> <br>
+                    <label for="formEmail" required> Insira seu email: </label>
+                    <input name="formEmail" id="formEmail" type="email" size="40"><br>
+                    <label for="formMessage"> Qual o motivo do seu contato</label> 
+                    <textarea name="formMessage" id="formMessage" type="text" rows="6"
+                        placeholder="Insira sua mensagem aqui"></textarea>
+
+                    <button type="button" onclick="validateForm()">Enviar</button>
+                </form>
+
+            </section>
+        </main>
+
+        <footer>
+            <div class="container-1-footer">
+                <div class="links">
+                    <a class="link" id="link-1" title="Essa feature ainda não existe, mas clique para testar."
+                        onclick="alertFeature()" href="">
+                        Politica de privacidade &#8674;
+                    </a>
+                    <a class="link" id="link-2" title="Essa feature ainda não existe, mas clique para testar."
+                        onclick="alertFeature()" href="">Termos e condições &#8674;</a>
+                    <a class="link" id="link-3" title="Essa feature ainda não existe, mas clique para testar."
+                        onclick="alertFeature()" href="">Manual do usuário &#8674;</a>
+                </div>
+                <div class="icons-footer-socialmedia">
+                    <a class="icon-whatsapp" href="https://www.whatsapp.com/?lang=pt_br" target="_blank">
+                        <img src="images/whatsapp-icon.png"> 
+                    </a>
+                    <a class="icon-instagram" href="https://www.instagram.com/" target="_blank"> <img
+                            src="images/instagram-icon.png"></a>
+                    <a class="icon-facebook" href="https://www.facebook.com/" target="_blank"> <img
+                            src="images/facebook-icones.png"> </a>
+                </div>
+            </div>
+            <div class="container-2-footer">
+                <div class="copyright">
+                    <p>&copy; 2023, Beatriz Rossati</p>
+                </div>
+                <div class="icons-footer-stores">
+                    <a class="icon-playstore" href="https://play.google.com/" target="_blank">
+                        <img src="images/logo_googleplay.png">
+                    </a>
+                    <a class="icon-appstore" href="https://www.apple.com/br/app-store/" target="_blank"> <img
+                            src="images/logo_appstore.png">
+                    </a>
+                </div>
+        </footer>
+    </div>
+</body>
+
+</html>
